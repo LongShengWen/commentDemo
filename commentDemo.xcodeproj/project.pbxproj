@@ -15,6 +15,12 @@
 		8FAC363520B65A9F00A869A2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC363420B65A9F00A869A2 /* main.m */; };
 		8FAC363F20B65A9F00A869A2 /* commentDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC363E20B65A9F00A869A2 /* commentDemoTests.m */; };
 		8FAC364A20B65A9F00A869A2 /* commentDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC364920B65A9F00A869A2 /* commentDemoUITests.m */; };
+		8FAC365920B65C2A00A869A2 /* swCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC365820B65C2A00A869A2 /* swCommentController.m */; };
+		8FAC366F20B660A300A869A2 /* swTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC366E20B660A300A869A2 /* swTableHeaderView.m */; };
+		8FAC367220B668A200A869A2 /* swCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC367120B668A200A869A2 /* swCommentCell.m */; };
+		8FAC367520B6A9FA00A869A2 /* swHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC367420B6A9FA00A869A2 /* swHeaderView.m */; };
+		8FAC369E20B6BE6B00A869A2 /* swCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC369D20B6BE6B00A869A2 /* swCommentModel.m */; };
+		EF3A68667A242CD9F189A121 /* libPods-commentDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 237F2840E8931AA32D5B2B31 /* libPods-commentDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		237F2840E8931AA32D5B2B31 /* libPods-commentDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-commentDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAC362220B65A9F00A869A2 /* commentDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commentDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAC362520B65A9F00A869A2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8FAC362620B65A9F00A869A2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +58,18 @@
 		8FAC364520B65A9F00A869A2 /* commentDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = commentDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FAC364920B65A9F00A869A2 /* commentDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = commentDemoUITests.m; sourceTree = "<group>"; };
 		8FAC364B20B65A9F00A869A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FAC365720B65C2A00A869A2 /* swCommentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swCommentController.h; sourceTree = "<group>"; };
+		8FAC365820B65C2A00A869A2 /* swCommentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swCommentController.m; sourceTree = "<group>"; };
+		8FAC366D20B660A300A869A2 /* swTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swTableHeaderView.h; sourceTree = "<group>"; };
+		8FAC366E20B660A300A869A2 /* swTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swTableHeaderView.m; sourceTree = "<group>"; };
+		8FAC367020B668A200A869A2 /* swCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swCommentCell.h; sourceTree = "<group>"; };
+		8FAC367120B668A200A869A2 /* swCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swCommentCell.m; sourceTree = "<group>"; };
+		8FAC367320B6A9FA00A869A2 /* swHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swHeaderView.h; sourceTree = "<group>"; };
+		8FAC367420B6A9FA00A869A2 /* swHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swHeaderView.m; sourceTree = "<group>"; };
+		8FAC369C20B6BE6B00A869A2 /* swCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swCommentModel.h; sourceTree = "<group>"; };
+		8FAC369D20B6BE6B00A869A2 /* swCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swCommentModel.m; sourceTree = "<group>"; };
+		9E63CD8A4C69D338C6BD9496 /* Pods-commentDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-commentDemo/Pods-commentDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B8D5A3E603D2B2D19854F8F1 /* Pods-commentDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-commentDemo/Pods-commentDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3A68667A242CD9F189A121 /* libPods-commentDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B4AD68936D0BDA8E5C68CA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8D5A3E603D2B2D19854F8F1 /* Pods-commentDemo.debug.xcconfig */,
+				9E63CD8A4C69D338C6BD9496 /* Pods-commentDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8FAC361920B65A9F00A869A2 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +114,8 @@
 				8FAC363D20B65A9F00A869A2 /* commentDemoTests */,
 				8FAC364820B65A9F00A869A2 /* commentDemoUITests */,
 				8FAC362320B65A9F00A869A2 /* Products */,
+				1B4AD68936D0BDA8E5C68CA5 /* Pods */,
+				900F1C43F903D717CB7FB127 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +141,16 @@
 				8FAC363020B65A9F00A869A2 /* LaunchScreen.storyboard */,
 				8FAC363320B65A9F00A869A2 /* Info.plist */,
 				8FAC363420B65A9F00A869A2 /* main.m */,
+				8FAC365720B65C2A00A869A2 /* swCommentController.h */,
+				8FAC365820B65C2A00A869A2 /* swCommentController.m */,
+				8FAC366D20B660A300A869A2 /* swTableHeaderView.h */,
+				8FAC366E20B660A300A869A2 /* swTableHeaderView.m */,
+				8FAC367020B668A200A869A2 /* swCommentCell.h */,
+				8FAC367120B668A200A869A2 /* swCommentCell.m */,
+				8FAC367320B6A9FA00A869A2 /* swHeaderView.h */,
+				8FAC367420B6A9FA00A869A2 /* swHeaderView.m */,
+				8FAC369C20B6BE6B00A869A2 /* swCommentModel.h */,
+				8FAC369D20B6BE6B00A869A2 /* swCommentModel.m */,
 			);
 			path = commentDemo;
 			sourceTree = "<group>";
@@ -132,6 +173,14 @@
 			path = commentDemoUITests;
 			sourceTree = "<group>";
 		};
+		900F1C43F903D717CB7FB127 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				237F2840E8931AA32D5B2B31 /* libPods-commentDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +188,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FAC364E20B65A9F00A869A2 /* Build configuration list for PBXNativeTarget "commentDemo" */;
 			buildPhases = (
+				610A2F59F3D1146822C552F8 /* [CP] Check Pods Manifest.lock */,
 				8FAC361E20B65A9F00A869A2 /* Sources */,
 				8FAC361F20B65A9F00A869A2 /* Frameworks */,
 				8FAC362020B65A9F00A869A2 /* Resources */,
+				E28B1D11E32432CF5E59354E /* [CP] Embed Pods Frameworks */,
+				A68BB9BBF212FA3FB5A88D36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +246,7 @@
 		8FAC361A20B65A9F00A869A2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = sw;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = LongShengWen;
 				TargetAttributes = {
@@ -260,14 +313,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		610A2F59F3D1146822C552F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-commentDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A68BB9BBF212FA3FB5A88D36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-commentDemo/Pods-commentDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E28B1D11E32432CF5E59354E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-commentDemo/Pods-commentDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8FAC361E20B65A9F00A869A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8FAC362A20B65A9F00A869A2 /* ViewController.m in Sources */,
+				8FAC369E20B6BE6B00A869A2 /* swCommentModel.m in Sources */,
+				8FAC365920B65C2A00A869A2 /* swCommentController.m in Sources */,
+				8FAC366F20B660A300A869A2 /* swTableHeaderView.m in Sources */,
 				8FAC363520B65A9F00A869A2 /* main.m in Sources */,
 				8FAC362720B65A9F00A869A2 /* AppDelegate.m in Sources */,
+				8FAC367520B6A9FA00A869A2 /* swHeaderView.m in Sources */,
+				8FAC367220B668A200A869A2 /* swCommentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,29 +537,37 @@
 		};
 		8FAC364F20B65A9F00A869A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8D5A3E603D2B2D19854F8F1 /* Pods-commentDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 866QKJCSN3;
+				DEVELOPMENT_TEAM = 5XR24UT92B;
 				INFOPLIST_FILE = commentDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.commentDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		8FAC365020B65A9F00A869A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E63CD8A4C69D338C6BD9496 /* Pods-commentDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 866QKJCSN3;
+				DEVELOPMENT_TEAM = 5XR24UT92B;
 				INFOPLIST_FILE = commentDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.commentDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
