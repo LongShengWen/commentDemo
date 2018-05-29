@@ -12,10 +12,12 @@
 #import "swCommentCell.h"
 #import "swHeaderView.h"
 #import "swCommentModel.h"
+#import "swEditView.h"
 
 @interface swCommentController ()<UITableViewDelegate,UITableViewDataSource,headerDelegate>
 
 @property(nonatomic,strong) UITableView *tableView;
+@property(nonatomic,strong) swEditView *editView;
 
 @end
 
@@ -28,7 +30,15 @@
     
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHidden:) name:UIKeyboardWillHideNotification object:nil];
+    
     [self build];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 - (void)build
 {
@@ -59,7 +69,7 @@
         [_tableView registerClass:[swCommentCell class] forCellReuseIdentifier:NSStringFromClass([swCommentCell class])];
         [_tableView registerClass:[swHeaderView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([swHeaderView class])];
     }
-    
+    self.editView.hidden = NO;
     return _tableView;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -90,6 +100,10 @@
     
     return headerView;
 }
+- (void)touchReplyComment:(swCommentModel *)model
+{
+    
+}
 - (void)touchOpenComment:(swCommentModel *)model
 {
     swCommentModel *cModel = commentArray[model.commentID];
@@ -115,6 +129,43 @@
         model.commentID = i;
         [commentArray addObject:model];
     }
+}
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    NSDictionary *userInfo = [notification userInfo];
+    CGRect keyboradFrame = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat hight = keyboradFrame.size.height;
+    NSTimeInterval time = [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]floatValue];
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:time animations:^{
+        [weakSelf.editView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.bottom.mas_equalTo(weakSelf.view).mas_offset(-hight);
+        }];
+    }];
+    
+}
+- (void)keyboardWillHidden:(NSNotification *)notification
+{
+    NSDictionary *userInfo = [notification userInfo];
+    NSTimeInterval time = [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey]floatValue];
+    __weak typeof(self)weaKSelf = self;
+    [UIView animateWithDuration:time animations:^{
+        [weaKSelf.editView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.bottom.mas_equalTo(weaKSelf.view);
+        }];
+    }];
+}
+- (swEditView *)editView
+{
+    if (_editView == nil) {
+        _editView = [[swEditView alloc]init];
+        [self.view addSubview:_editView];
+        [self.view bringSubviewToFront:_editView];
+        [_editView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.mas_equalTo(self.view);
+        }];
+    }
+    return _editView;
 }
 @end
 

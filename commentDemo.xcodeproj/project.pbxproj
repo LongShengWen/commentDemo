@@ -20,6 +20,7 @@
 		8FAC367220B668A200A869A2 /* swCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC367120B668A200A869A2 /* swCommentCell.m */; };
 		8FAC367520B6A9FA00A869A2 /* swHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC367420B6A9FA00A869A2 /* swHeaderView.m */; };
 		8FAC369E20B6BE6B00A869A2 /* swCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC369D20B6BE6B00A869A2 /* swCommentModel.m */; };
+		8FAC36A120BD3E7E00A869A2 /* swEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FAC36A020BD3E7E00A869A2 /* swEditView.m */; };
 		EF3A68667A242CD9F189A121 /* libPods-commentDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 237F2840E8931AA32D5B2B31 /* libPods-commentDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		8FAC367420B6A9FA00A869A2 /* swHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swHeaderView.m; sourceTree = "<group>"; };
 		8FAC369C20B6BE6B00A869A2 /* swCommentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swCommentModel.h; sourceTree = "<group>"; };
 		8FAC369D20B6BE6B00A869A2 /* swCommentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swCommentModel.m; sourceTree = "<group>"; };
+		8FAC369F20BD3E7E00A869A2 /* swEditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = swEditView.h; sourceTree = "<group>"; };
+		8FAC36A020BD3E7E00A869A2 /* swEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = swEditView.m; sourceTree = "<group>"; };
 		9E63CD8A4C69D338C6BD9496 /* Pods-commentDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-commentDemo/Pods-commentDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B8D5A3E603D2B2D19854F8F1 /* Pods-commentDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commentDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-commentDemo/Pods-commentDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +154,8 @@
 				8FAC367420B6A9FA00A869A2 /* swHeaderView.m */,
 				8FAC369C20B6BE6B00A869A2 /* swCommentModel.h */,
 				8FAC369D20B6BE6B00A869A2 /* swCommentModel.m */,
+				8FAC369F20BD3E7E00A869A2 /* swEditView.h */,
+				8FAC36A020BD3E7E00A869A2 /* swEditView.m */,
 			);
 			path = commentDemo;
 			sourceTree = "<group>";
@@ -369,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FAC36A120BD3E7E00A869A2 /* swEditView.m in Sources */,
 				8FAC362A20B65A9F00A869A2 /* ViewController.m in Sources */,
 				8FAC369E20B6BE6B00A869A2 /* swCommentModel.m in Sources */,
 				8FAC365920B65C2A00A869A2 /* swCommentController.m in Sources */,

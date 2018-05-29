@@ -12,7 +12,10 @@
 @protocol headerDelegate <NSObject>
 
 @optional
+
 - (void)touchOpenComment:(swCommentModel *)model;
+- (void)touchReplyComment:(swCommentModel *)model;
+
 @end
 
 @interface swHeaderView : UITableViewHeaderFooterView
