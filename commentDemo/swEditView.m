@@ -33,6 +33,9 @@
         make.edges.mas_equalTo(self);
     }];
     backgroundView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+    UITapGestureRecognizer *backTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(touchBackgroundView)];
+    [backgroundView addGestureRecognizer:backTap];
+    [backgroundView setUserInteractionEnabled:YES];
     
     editView = [UIView new];
     [backgroundView addSubview:editView];
@@ -49,6 +52,15 @@
     }];
     textField.placeholder = @"请输入";
     textField.backgroundColor = [UIColor grayColor];
+}
+
+- (void)touchBackgroundView
+{
+    [textField endEditing:YES];
+    if (self.callbackDelegate) {
+        
+        [self.callbackDelegate touchEndEditView];
+    }
 }
 
 @end

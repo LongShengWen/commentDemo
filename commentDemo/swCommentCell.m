@@ -42,5 +42,11 @@
     }];
     lb_comment.text = @"我评论了你";
 }
+- (void)setDataModel:(swCommentModel *)commentModel
+{
+    self.baseModel = commentModel;
+    NSString *comment = [NSString stringWithFormat:@"%@%@%@%@",commentModel.userName,@"回复",commentModel.toUserName,commentModel.comment];
+    lb_comment.text = comment;
+}
 
 @end

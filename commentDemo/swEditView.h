@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol swEditViewDelegate <NSObject>
+@optional
 
+- (void)touchEndEditView;
+
+@end
 @interface swEditView : UIView
+
+@property(nonatomic,weak) id<swEditViewDelegate> callbackDelegate;
 
 @end

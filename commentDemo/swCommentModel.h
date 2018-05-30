@@ -11,9 +11,16 @@
 @interface swCommentModel : NSObject
 
 @property(nonatomic,strong) NSString *userName;
+@property(nonatomic,strong) NSString *userId;
 @property(nonatomic,assign) BOOL isOpen;
 @property(nonatomic,strong) NSString *comment;
 @property(nonatomic,assign) NSInteger commentID;
+@property(nonatomic,strong) NSString *toUserName;
+@property(nonatomic,strong) NSString *toUserId;
+
+@property(nonatomic,strong) NSMutableArray *subCommentArray;
+
+- (void)buildCommentModel:(NSDictionary *)dic;
 
 @end
 

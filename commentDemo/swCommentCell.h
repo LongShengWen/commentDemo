@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "swCommentModel.h"
 
 @interface swCommentCell : UITableViewCell
+
+@property(nonatomic,strong) swCommentModel *baseModel;
+
+- (void)setDataModel:(swCommentModel *)commentModel;
 
 @end

@@ -14,7 +14,7 @@
 #import "swCommentModel.h"
 #import "swEditView.h"
 
-@interface swCommentController ()<UITableViewDelegate,UITableViewDataSource,headerDelegate>
+@interface swCommentController ()<UITableViewDelegate,UITableViewDataSource,headerDelegate,swEditViewDelegate>
 
 @property(nonatomic,strong) UITableView *tableView;
 @property(nonatomic,strong) swEditView *editView;
@@ -69,7 +69,6 @@
         [_tableView registerClass:[swCommentCell class] forCellReuseIdentifier:NSStringFromClass([swCommentCell class])];
         [_tableView registerClass:[swHeaderView class] forHeaderFooterViewReuseIdentifier:NSStringFromClass([swHeaderView class])];
     }
-    self.editView.hidden = NO;
     return _tableView;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -78,13 +77,16 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    swCommentModel *model = commentArray[section];
+    return model.subCommentArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     swCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([swCommentCell class]) forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    swCommentModel *model = commentArray[indexPath.section];
+    [cell setDataModel:model.subCommentArray[indexPath.row]];
     
     return cell;
 }
@@ -102,7 +104,11 @@
 }
 - (void)touchReplyComment:(swCommentModel *)model
 {
-    
+    self.editView.hidden = NO;
+}
+- (void)touchEndEditView
+{
+    self.editView.hidden = YES;
 }
 - (void)touchOpenComment:(swCommentModel *)model
 {
@@ -124,8 +130,7 @@
     for (int i = 0; i < 4; i ++) {
         
         swCommentModel *model = [[swCommentModel alloc]init];
-        model.userName = @"SB";
-        model.comment = @"论评论我是评论我是评论评论我是评论我是评论评论我是评论我论评论我是评论我是评论评论我是评论我是评论评论我是评论我论评论我是评论我是评论评论我是评论我是评论评论我是评论我是评论";
+        [model buildCommentModel:nil];
         model.commentID = i;
         [commentArray addObject:model];
     }
@@ -153,6 +158,10 @@
         [weaKSelf.editView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.bottom.mas_equalTo(weaKSelf.view);
         }];
+    } completion:^(BOOL finished) {
+        if (finished == YES) {
+            weaKSelf.editView.hidden = YES;
+        }
     }];
 }
 - (swEditView *)editView
@@ -164,6 +173,7 @@
         [_editView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(self.view);
         }];
+        _editView.callbackDelegate = self;
     }
     return _editView;
 }
